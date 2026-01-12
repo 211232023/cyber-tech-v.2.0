@@ -1,0 +1,187 @@
+/* src/pages/Login/Login.module.css (Atualizado) */
+
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem; /* Espaçamento para o card não grudar no header/footer */
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+.loginCard {
+  background: #095e8b !important; /* Fundo BRANCO sólido para contraste */
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 2rem;
+  border-radius: 12px; 
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), 
+              0 2px 8px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 450px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.loginCard h2 {
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: #ffffff; /* Texto ESCURO para contraste */
+  letter-spacing: -0.02em;
+}
+
+.loginCard p {
+  color: #ffffff; 
+}
+
+.loginSubtitle {
+  text-align: center;
+  color: #ffffff; /* Cinza mais escuro para melhor legibilidade */
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  box-sizing: border-box; 
+  transition: all 0.3s;
+  color: #1e293b; /* Texto escuro */
+  background-color: #ffffff; /* Fundo branco sólido */
+  font-size: 1rem;
+}
+
+.formGroup input:hover {
+   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.formGroup input::placeholder {
+  color: #94a3b8;
+}
+
+.formGroup input:focus {
+  border-color: var(--color-primary-start); 
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.25);
+  outline: none;
+}
+
+
+.loginButton {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0d6efd 0%, #3b9dff 100%);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+  margin-top: 0.5rem;
+}
+
+.loginButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.loginButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.switchAuth {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  color: #ffffff; /* Cinza mais escuro */
+  font-size: 0.9rem;
+}
+
+.switchAuth a {
+  color: #0d6efd; /* Azul Cadastre-se */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.switchAuth a:hover {
+  color: #3b9dff;
+  text-decoration: underline;
+}
+
+/* --- SEÇÃO ATUALIZADA --- */
+/* Estilos migrados do Login.css antigo */
+
+.passwordReset{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.passwordResetLink {
+  /* Estilos do Login.css, adaptados para as variáveis do front-end */
+  color: 0F0F0F; /* Cor primária do front-end */
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.passwordResetLink:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para mensagens de erro */
+.errorMessage {
+  background: linear-gradient(135deg, #fee 0%, #fdd 100%);
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  border: 2px solid #fecaca;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.1);
+  text-align: center;
+}
+
+/* --- RESPONSIVIDADE PARA FORMULÁRIOS --- */
+
+@media (max-width: 600px) {
+  .loginContainer {
+    padding: 10px;
+    align-items: flex-start; /* Começa do topo */
+    padding-top: 100px; /* Espaço para o header */
+  }
+
+  .loginCard {
+    padding: 1rem;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .formGroup input {
+    font-size: 16px; /* Evita zoom automático no iOS */
+    padding: 12px;
+  }
+
+  .loginButton {
+    padding: 12px;
+  }
+}

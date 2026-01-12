@@ -1,0 +1,260 @@
+/* ===============================
+   CONTAINER GERAL DO POST
+=============================== */
+.blog-post-container {
+  background-color: var(--color-surface);
+  color: var(--text-main);
+  margin: 0 auto;
+  max-width: 950px;
+  padding: 30px 40px;
+
+  border: 1px solid #dce3e9;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* ===============================
+   TÍTULOS
+=============================== */
+.blog-title {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 10px;
+}
+
+.blog-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.blog-section-title {
+  color: var(--color-primary);
+  border-left: 4px solid var(--color-primary);
+  padding-left: 12px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* ===============================
+   TEXTO
+=============================== */
+.blog-text {
+  color: var(--text-main);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.blog-text strong {
+  color: var(--color-secondary);
+}
+
+/* ===============================
+   CAIXAS DE DESTAQUE
+=============================== */
+.blog-highlight-box {
+  background-color: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 30px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.blog-highlight-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #095e8b;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===============================
+   IMAGENS
+=============================== */
+.blog-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.blog-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.blog-img-caption {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* ===============================
+   BLOCO DE CÓDIGO
+=============================== */
+.blog-code-snippet {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  font-family: 'Consolas', monospace;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-left: 5px solid #3b82f6;
+  font-size: 0.95rem;
+}
+
+/* ===============================
+   LISTAS
+=============================== */
+.blog-list {
+  list-style-type: disc;
+  padding-left: 25px;
+  margin-bottom: 25px;
+}
+
+.blog-list li {
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   NAVEGAÇÃO ENTRE POSTS (NOVO)
+=============================== */
+.blog-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #e2e8f0;
+  gap: 15px;
+}
+
+.blog-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #095e8b;
+  padding: 12px 24px;
+
+  border: 1px solid #bcdaf0;
+  border-radius: 8px;
+
+  transition: 0.25s ease;
+  min-width: 120px;
+  /* Garante tamanho uniforme */
+}
+
+.blog-nav-link:hover {
+  background-color: #e0f2fe;
+  border-color: #90c7e8;
+  transform: translateY(-2px);
+}
+
+/* Estado desabilitado */
+.blog-nav-link.disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  border-color: #e0e0e0;
+  color: #999;
+}
+
+/* Ícones dentro dos botões */
+.nav-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilo para o botão MENU central */
+.menu-link2 {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  object-fit: contain;
+}
+
+:hover .menu-link2 {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+=============================== */
+@media (max-width: 1024px) {
+  .blog-post-container {
+    margin: 0 20px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post-container {
+    padding: 20px;
+  }
+
+  .blog-title {
+    font-size: 1.7rem;
+  }
+
+  .blog-section-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Pequeno (Ajuste dos botões em linha) */
+@media (max-width: 600px) {
+  .blog-post-container {
+    margin: 0 10px;
+    padding: 18px;
+  }
+
+  .blog-title {
+    font-size: 1.5rem;
+  }
+
+  /* Força a navegação a ficar em linha (row) */
+  .blog-navigation {
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 40px;
+  }
+
+  /* Botões laterais ocupam o espaço disponível */
+  .blog-nav-link {
+    flex: 1;
+    width: auto;
+    padding: 10px 5px;
+    font-size: 0.85rem;
+    height: 45px;
+    min-width: 0;
+    /* Permite encolher */
+  }
+
+  /* Botão central não estica */
+  .menu-link {
+    flex: 0 0 auto !important;
+    width: 45px;
+  }
+
+  .nav-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
