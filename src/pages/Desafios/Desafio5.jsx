@@ -4,7 +4,7 @@ import { db, auth } from "../../../FirebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
-export default function DesafioDiaENoite() {
+export default function Desafio5() {
   const total = 5;
   const corretas = ["b", "b", "a", "a", "a"];
 
@@ -45,7 +45,6 @@ export default function DesafioDiaENoite() {
   if (porcentagem >= 85) msg = "Excelente!";
   else if (porcentagem >= 60) msg = "Bom trabalho!";
 
-  // 🔥 Salvar no Firebase
   useEffect(() => {
     if (verificarFim && !salvo && auth.currentUser) {
       const salvarNoBanco = async () => {
