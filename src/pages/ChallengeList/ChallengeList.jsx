@@ -59,6 +59,16 @@ function ChallengeList() {
           ></video>
           <p>Funções</p>
         </Link>
+        <Link to="/desafios/desafio5" className={styles.challengeCard}>
+          <video
+            src="/videos/sollua.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
+          <p>Teste</p>
+        </Link>
       </div>
     </div>
   );
